@@ -46,3 +46,11 @@ steps:
     appType: 'webApp'
     WebAppName: 'ifidemodev'
     packageForLinux: '$(Build.ArtifactStagingDirectory)/**/*.zip'
+
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'DevOps Demo 3'
+    appType: 'webApp'
+    WebAppName: 'ifidemodev'
+    packageForLinux: '$(Build.ArtifactStagingDirectory)/**/*.zip'
